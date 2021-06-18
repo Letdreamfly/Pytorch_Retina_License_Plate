@@ -230,7 +230,8 @@ class preproc(object):
 
         landm_t[:, 0::2] /= width
         landm_t[:, 1::2] /= height
-        labels_t = np.expand_dims(labels_t, 0)
+        # labels_t = np.expand_dims(labels_t, 0)
+        labels_t = np.expand_dims(labels_t, 1)
         
         targets_t = np.hstack((boxes_t, landm_t, labels_t))
         
